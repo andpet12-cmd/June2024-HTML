@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function determineQuarter(time) {
+        if (time >= 0 && time <= 14) {
+            return 'Перша чверть години'
+        }else if (time >=15 && time <=29) {
+            return 'Друга чверть години'
+        }else if (time >=30 && time <=44) {
+            return 'Третя чверть години'
+        }else if (time >= 45 && time <= 59){
+            return 'Четверта чверть години'
+        }else{
+            return 'Не вірне значення часу'
+        }
+
+    }
+
+    let testValues = [10, 15, 39, 59, 62]
+    for (let value of testValues) {
+        console.log(`Час: ${value} хвилин: ${determineQuarter(value)}`);
+    }
+
+</script>
+
+</body>
+</html>
+
+<!--Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число-->
+<!--(в першу, другу, третю або четверту частину години).-->
