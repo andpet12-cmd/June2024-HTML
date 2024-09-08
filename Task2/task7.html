@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function determineDecade(day) {
+        if (day >= 1 && day <=10) {
+            return 'Перша декада місяця'
+        }else if (day >= 11 && day <= 20) {
+            return 'Друга декада місяця'
+        }else if (day >=21 && day <=31){
+            return 'Третя декада місяця'
+        }else{
+            return 'False'
+        }
+    }
+
+    let testDays = [5, 15, 25, 32];
+    for (let day of testDays) {
+        console.log(`День ${day}: ${determineDecade(day)}`);
+    }
+
+</script>
+
+</body>
+</html>
+
+<!--У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число -->
+<!--(у першу, другу чи третю).-->
