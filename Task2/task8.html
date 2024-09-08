@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function getSchedule(dayNumber) {
+        let dayName;
+
+        switch (dayNumber) {
+            case 1:
+                dayName = 'Monday';
+                break;
+            case 2:
+                dayName = 'Tuesday';
+                break;
+            case 3:
+                dayName = 'Wednesday';
+                break;
+            case 4:
+                dayName = 'Thursday';
+                break;
+            case 5:
+                dayName = 'Friday';
+                break;
+            case 6:
+                dayName = 'Saturday';
+                break;
+            case 7:
+                dayName = 'Sunday';
+                break;
+            default:
+                return 'Неправильний номер дня. Будь ласка, введіть число від 1 до 7.';
+
+        }
+        return `На цей день заплановано: ${dayName}`;
+    }
+    let dayNumber = parseInt(prompt("Введіть номер дня тижня (1-7):"));
+    console.log(getSchedule(dayNumber));
+
+</script>
+
+</body>
+</html>
+
+<!--Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані-->
+<!--відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).-->
